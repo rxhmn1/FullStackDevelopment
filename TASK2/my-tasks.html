@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Tasks | TaskPulse</title>
+
+    <link rel="icon" href="assets/images/focus-track-logo.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar glass">
+            <div class="sidebar-brand">
+                <img
+                    src="assets/images/focus-track-logo.png"
+                    alt="TaskPulse Logo"
+                />
+                <span>TaskPulse</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-link">🚀 Dashboard</a>
+                <a href="my-tasks.html" class="nav-link active">✅ Tasks</a>
+                <a href="profile.html" class="nav-link">🧑 Profile</a>
+                <a href="index.html" class="nav-link">🚪 Logout</a>
+            </nav>
+        </aside>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+
+            <!-- Page Header -->
+            <header class="dashboard-header glass">
+                <div>
+                    <h1>My Tasks 📋</h1>
+                    <p class="text-muted">
+                        View and manage all your tasks in one place.
+                    </p>
+                </div>
+
+                <button class="btn btn-primary">
+                    + Add Task
+                </button>
+            </header>
+
+            <!-- Task Section -->
+            <section class="tasks-section glass card">
+                <div class="tasks-header">
+                    <h2>All Tasks</h2>
+
+                    <div class="task-controls">
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Search tasks..."
+                        />
+                    </div>
+                </div>
+
+                <div class="task-list">
+                    <!-- Tasks will be rendered dynamically -->
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

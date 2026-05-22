@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | TaskPulse</title>
+
+    <link rel="icon" href="assets/images/focus-track-logo.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar glass">
+            <div class="sidebar-brand">
+                <img
+                    src="assets/images/focus-track-logo.png"
+                    alt="TaskPulse Logo"
+                />
+                <span>TaskPulse</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-link">🚀 Dashboard</a>
+                <a href="my-tasks.html" class="nav-link">✅ Tasks</a>
+                <a href="profile.html" class="nav-link active">🧑 Profile</a>
+                <a href="index.html" class="nav-link">🚪 Logout</a>
+            </nav>
+        </aside>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="dashboard-header glass">
+                <div>
+                    <h1>My Profile 👤</h1>
+                    <p class="text-muted">
+                        Personal information and developer details.
+                    </p>
+                </div>
+            </header>
+
+            <!-- Profile Card -->
+            <section class="glass card profile-card">
+                <div class="profile-top">
+                    <div class="profile-avatar">
+                        JR
+                    </div>
+
+                    <div>
+                        <h2>Mohammed Abdul Rahman</h2>
+                        <p class="text-muted">
+                            Aspiring Full Stack Developer
+                        </p>
+                    </div>
+                </div>
+
+                <div class="profile-details">
+    
+
+    <div class="profile-item">
+        <h3>Number of Tasks</h3>
+        <p id="profileTaskCount">0</p>
+    </div>
+
+    
+</div>
+
+        </main>
+    </div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Get registered users from localStorage
+    const users = JSON.parse(localStorage.getItem('focusTrackUsers')) || [];
+
+    // Use the most recently registered user
+    const currentUser = users.length > 0 ? users[users.length - 1] : null;
+
+    // Display email
+    const emailElement = document.getElementById('profileEmail');
+    if (emailElement) {
+        emailElement.textContent = currentUser
+            ? currentUser.email
+            : 'Not Available';
+    }
+
+    // Display password (masked)
+    const passwordElement = document.getElementById('profilePassword');
+    if (passwordElement) {
+        if (currentUser && currentUser.password) {
+            passwordElement.textContent =
+                '•'.repeat(currentUser.password.length);
+        } else {
+            passwordElement.textContent = 'Not Available';
+        }
+    }
+
+    // Display task count
+    const tasks = JSON.parse(localStorage.getItem('focusTrackTasks')) || [];
+    const taskCountElement = document.getElementById('profileTaskCount');
+
+    if (taskCountElement) {
+        taskCountElement.textContent = tasks.length;
+    }
+});
+</script>
+</body>
+</html>

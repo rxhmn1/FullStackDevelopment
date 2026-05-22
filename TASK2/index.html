@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskPulse | Organize Faster. Work Smarter.</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/focus-track-logo.png" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+    <!-- ======================================================
+         HERO SECTION
+    ======================================================= -->
+    <section class="hero">
+        <div class="container">
+
+            <!-- Circular Glass Logo Card -->
+            <div class="hero-logo">
+                <img
+                    src="images/focus-track-logo.png"
+                    alt="TaskPulse Logo"
+                />
+            </div>
+
+            <!-- Project Title -->
+            <h1 class="hero-title text-gradient">TaskPulse</h1>
+
+            <!-- Tagline -->
+            <p class="hero-tagline">Organize Faster. Work Smarter.</p>
+
+            <!-- Short Description -->
+            <p class="hero-description">
+                Organize tasks, monitor progress, and achieve your goals
+                with clarity and focus.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="hero-actions">
+    <a href="register.html" class="btn btn-primary">
+        Get Started
+    </a>
+
+    <a href="login.html" class="btn btn-secondary login-btn">
+        Login
+    </a>
+</div>
+
+        </div>
+    </section>
+
+    <!-- ======================================================
+         FEATURES SECTION
+    ======================================================= -->
+    <section class="features">
+        <div class="container">
+
+            <h2 class="section-title text-gradient">
+                Powerful Productivity Features
+            </h2>
+
+            <p class="section-subtitle">
+                Everything you need to stay organized, focused,
+                and productive.
+            </p>
+
+            <div class="features-grid">
+
+                <div class="glass card feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Task Management</h3>
+                    <p>Create, edit, prioritize, and organize tasks easily.</p>
+                </div>
+
+                <div class="glass card feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Progress Tracking</h3>
+                    <p>Monitor completed tasks and productivity trends.</p>
+                </div>
+
+                <div class="glass card feature-card">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Smart Notifications</h3>
+                    <p>Receive reminders for important deadlines.</p>
+                </div>
+
+                <div class="glass card feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Analytics</h3>
+                    <p>Visualize your performance with interactive charts.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const loginButton = document.querySelector('.login-btn');
+
+    if (loginButton) {
+        loginButton.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            // Start the animation
+            document.body.classList.add('login-transition');
+
+            // Navigate after animation completes
+            setTimeout(() => {
+                window.location.href = this.getAttribute('href');
+            }, 1200);
+        });
+    }
+});
+</script>
+</body>
+</html>

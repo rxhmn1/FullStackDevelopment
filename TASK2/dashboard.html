@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | TaskPulse</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/focus-track-logo.png" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+    <!-- ======================================================
+         DASHBOARD LAYOUT
+    ======================================================= -->
+    <div class="dashboard">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar glass">
+            <!-- Logo -->
+            <div class="sidebar-brand">
+                <img
+                    src="assets/images/focus-track-logo.png"
+                    alt="TaskPulse Logo"
+                />
+                <span>TaskPulse</span>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-link active">🚀 Dashboard</a>
+<a href="my-tasks.html" class="nav-link">✅ Tasks</a>
+<a href="profile.html" class="nav-link">🧑 Profile</a>
+<a href="index.html" class="nav-link">🚪 Logout</a>
+            </nav>
+        </aside>
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="dashboard-header glass">
+                <div>
+                    <h1>Welcome Back, Jashwanth 👋</h1>
+                    <p class="text-muted">
+                        Stay focused and achieve your goals.
+                    </p>
+                </div>
+
+                <button class="btn btn-primary">
+                    + Add Task
+                </button>
+            </header>
+
+            <!-- Statistics Cards -->
+            <section class="stats-grid">
+                <div class="glass card stat-card">
+                    <h3>Total Tasks</h3>
+                    <h2>24</h2>
+                </div>
+
+                <div class="glass card stat-card">
+                    <h3>Completed</h3>
+                    <h2>18</h2>
+                </div>
+
+                <div class="glass card stat-card">
+                    <h3>Pending</h3>
+                    <h2>6</h2>
+                </div>
+
+                <div class="glass card stat-card">
+                    <h3>Productivity</h3>
+                    <h2>75%</h2>
+                </div>
+            </section>
+
+            <!-- Task Section -->
+            <section class="tasks-section glass card">
+                <div class="tasks-header">
+    <h2>My Tasks</h2>
+
+    <div class="task-controls">
+        <!-- Search Input -->
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search tasks..."
+        />
+    </div>
+</div>
+
+                <!-- Add Task Form -->
+<form id="taskForm" class="task-form">
+    <input
+        type="text"
+        id="taskTitle"
+        placeholder="Enter Task Title"
+        required
+    />
+
+    <textarea
+        id="taskDescription"
+        placeholder="Enter Task Description"
+        rows="4"
+    ></textarea>
+
+    <input
+        type="date"
+        id="taskDueDate"
+        required
+    />
+
+    <button
+        type="submit"
+        class="btn btn-primary task-submit-btn"
+    >
+        Add Task
+    </button>
+</form>
+
+<!-- Task List -->
+<div class="task-list">
+    <!-- Tasks will be generated dynamically by dashboard.js -->
+</div>
+            </section>
+
+        </main>
+    </div>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
