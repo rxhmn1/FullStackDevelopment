@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | NovaMart</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Background Effects -->
+    <div class="bg-blur bg-blur-1"></div>
+    <div class="bg-blur bg-blur-2"></div>
+    <div class="bg-blur bg-blur-3"></div>
+
+    <!-- =======================================================
+         HEADER / NAVBAR
+    ======================================================== -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-shopping-bag"></i>
+                <span>NovaMart</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="index.html#categories">Categories</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- =======================================================
+         REGISTER SECTION
+    ======================================================== -->
+    <section class="section auth-section">
+        <div class="container">
+            <div class="auth-wrapper">
+                <div class="auth-card glass-card">
+                    <div class="auth-header">
+                        <span class="section-badge">Join NovaMart</span>
+                        <h1>Create Your Account</h1>
+                        <p>
+                            Register to start shopping and track your orders.
+                        </p>
+                    </div>
+
+                    <form class="auth-form" id="register-form">
+                        <!-- Full Name -->
+                        <div class="form-group">
+                            <label for="register-name">Full Name</label>
+                            <div class="input-group">
+                                <i class="fas fa-user"></i>
+                                <input
+                                    type="text"
+                                    id="register-name"
+                                    placeholder="Enter your full name"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="register-email">Email Address</label>
+                            <div class="input-group">
+                                <i class="fas fa-envelope"></i>
+                                <input
+                                    type="email"
+                                    id="register-email"
+                                    placeholder="Enter your email"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="form-group">
+                            <label for="register-password">Password</label>
+                            <div class="input-group">
+                                <i class="fas fa-lock"></i>
+                                <input
+                                    type="password"
+                                    id="register-password"
+                                    placeholder="Create a password"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Confirm Password -->
+                        <div class="form-group">
+                            <label for="register-confirm-password">
+                                Confirm Password
+                            </label>
+                            <div class="input-group">
+                                <i class="fas fa-shield-halved"></i>
+                                <input
+                                    type="password"
+                                    id="register-confirm-password"
+                                    placeholder="Confirm your password"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary auth-btn">
+                            <i class="fas fa-user-plus"></i>
+                            Create Account
+                        </button>
+                    </form>
+
+                    <!-- Divider -->
+                    <div class="auth-divider">
+                        <span>Already have an account?</span>
+                    </div>
+
+                    <!-- Login Link -->
+                    <a
+                        href="login.html"
+                        class="btn btn-secondary auth-btn"
+                    >
+                        <i class="fas fa-right-to-bracket"></i>
+                        Login Instead
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================
+         FOOTER
+    ======================================================== -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>NovaMart</span>
+                </a>
+                <p>
+                    Your trusted destination for premium products and seamless
+                    online shopping.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="cart.html">Cart</a>
+                <a href="login.html">Login</a>
+            </div>
+
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <p>Email: support@novamart.com</p>
+                <p>Phone: +91 98765 43210</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 NovaMart. All rights reserved. Built by Rahman Reddy.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>

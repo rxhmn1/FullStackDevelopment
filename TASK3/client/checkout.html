@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | NovaMart</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Background Effects -->
+    <div class="bg-blur bg-blur-1"></div>
+    <div class="bg-blur bg-blur-2"></div>
+    <div class="bg-blur bg-blur-3"></div>
+
+    <!-- =======================================================
+         HEADER / NAVBAR
+    ======================================================== -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-shopping-bag"></i>
+                <span>NovaMart</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="index.html#categories">Categories</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- =======================================================
+         CHECKOUT HERO
+    ======================================================== -->
+    <section class="products-hero">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Secure Checkout</span>
+                <h1>Complete Your Order</h1>
+                <p>
+                    Enter your shipping details and place your order securely.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================
+         CHECKOUT SECTION
+    ======================================================== -->
+    <section class="section checkout-section">
+        <div class="container">
+            <div class="cart-layout">
+
+                <!-- Checkout Form -->
+                <div class="auth-card glass-card">
+                    <div class="auth-header">
+                        <h2>Shipping Information</h2>
+                        <p>
+                            Please provide accurate delivery details.
+                        </p>
+                    </div>
+
+                    <form class="auth-form" id="checkout-form">
+                        <div class="form-group">
+                            <label for="checkout-name">Full Name</label>
+                            <div class="input-group">
+                                <i class="fas fa-user"></i>
+                                <input
+                                    type="text"
+                                    id="checkout-name"
+                                    placeholder="Enter your full name"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="checkout-email">Email Address</label>
+                            <div class="input-group">
+                                <i class="fas fa-envelope"></i>
+                                <input
+                                    type="email"
+                                    id="checkout-email"
+                                    placeholder="Enter your email"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="checkout-phone">Phone Number</label>
+                            <div class="input-group">
+                                <i class="fas fa-phone"></i>
+                                <input
+                                    type="tel"
+                                    id="checkout-phone"
+                                    placeholder="Enter your phone number"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="checkout-address">Address</label>
+                            <div class="input-group">
+                                <i class="fas fa-location-dot"></i>
+                                <input
+                                    type="text"
+                                    id="checkout-address"
+                                    placeholder="Enter your address"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="checkout-city">City</label>
+                            <div class="input-group">
+                                <i class="fas fa-city"></i>
+                                <input
+                                    type="text"
+                                    id="checkout-city"
+                                    placeholder="Enter your city"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="checkout-state">State</label>
+                            <div class="input-group">
+                                <i class="fas fa-map"></i>
+                                <input
+                                    type="text"
+                                    id="checkout-state"
+                                    placeholder="Enter your state"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="checkout-zip">ZIP Code</label>
+                            <div class="input-group">
+                                <i class="fas fa-mail-bulk"></i>
+                                <input
+                                    type="text"
+                                    id="checkout-zip"
+                                    placeholder="Enter ZIP code"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary auth-btn">
+                            <i class="fas fa-check-circle"></i>
+                            Place Order
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Order Summary -->
+                <aside class="cart-summary glass-card">
+                    <h3>Order Summary</h3>
+
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="checkout-subtotal">₹0</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span id="checkout-shipping">₹99</span>
+                    </div>
+
+                    <div class="summary-row total-row">
+                        <span>Total</span>
+                        <span id="checkout-total">₹0</span>
+                    </div>
+
+                    <a href="cart.html" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Cart
+                    </a>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>

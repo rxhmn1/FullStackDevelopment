@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | NovaMart</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Background Effects -->
+    <div class="bg-blur bg-blur-1"></div>
+    <div class="bg-blur bg-blur-2"></div>
+    <div class="bg-blur bg-blur-3"></div>
+
+    <!-- =======================================================
+         HEADER / NAVBAR
+    ======================================================== -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-shopping-bag"></i>
+                <span>NovaMart</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="orders.html">Orders</a></li>
+                <li><a href="admin.html" class="active">Admin</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- =======================================================
+         ADMIN HERO
+    ======================================================== -->
+    <section class="products-hero">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Administration</span>
+                <h1>Admin Dashboard</h1>
+                <p>
+                    Manage products and customer orders from one place.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================
+         ADMIN DASHBOARD
+    ======================================================== -->
+    <section class="section admin-section">
+        <div class="container">
+
+            <!-- Add Product Form -->
+            <div class="auth-card glass-card">
+                <div class="auth-header">
+                    <h2>Add New Product</h2>
+                    <p>Create products that will appear in the store.</p>
+                </div>
+
+                <form class="auth-form" id="admin-product-form">
+                    <div class="form-group">
+                        <label for="admin-product-name">Product Name</label>
+                        <div class="input-group">
+                            <i class="fas fa-box"></i>
+                            <input
+                                type="text"
+                                id="admin-product-name"
+                                placeholder="Enter product name"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="admin-product-description">
+                            Description
+                        </label>
+                        <div class="input-group">
+                            <i class="fas fa-align-left"></i>
+                            <input
+                                type="text"
+                                id="admin-product-description"
+                                placeholder="Enter product description"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="admin-product-price">Price (₹)</label>
+                        <div class="input-group">
+                            <i class="fas fa-indian-rupee-sign"></i>
+                            <input
+                                type="number"
+                                id="admin-product-price"
+                                placeholder="Enter price"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="admin-product-category">Category</label>
+                        <div class="input-group">
+                            <i class="fas fa-tags"></i>
+                            <select id="admin-product-category" required>
+                                <option value="">Select Category</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="fashion">Fashion</option>
+                                <option value="home">Home & Living</option>
+                                <option value="accessories">Accessories</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary auth-btn">
+                        <i class="fas fa-plus-circle"></i>
+                        Add Product
+                    </button>
+                </form>
+            </div>
+
+            <!-- Products Management -->
+            <div class="section-header" style="margin-top: 5rem;">
+                <span class="section-badge">Product Management</span>
+                <h2>Manage Products</h2>
+                <p>View and remove products from the catalog.</p>
+            </div>
+
+            <div class="products-grid" id="admin-products-grid">
+                <!-- JavaScript will render products -->
+            </div>
+
+            <!-- Orders Management -->
+            <div class="section-header" style="margin-top: 5rem;">
+                <span class="section-badge">Order Management</span>
+                <h2>Manage Orders</h2>
+                <p>Update the status of customer orders.</p>
+            </div>
+
+            <div class="orders-container" id="admin-orders-container">
+                <!-- JavaScript will render admin orders -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>
