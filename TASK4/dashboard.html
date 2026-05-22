@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workspace | StoryHub</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- Background Blur Effects -->
+    <div class="bg-blur blur-1"></div>
+    <div class="bg-blur blur-2"></div>
+
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-toggle" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="StoryHub Logo" />
+                <h1>StoryHub</h1>
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="nav-links">
+                <a href="index.html" class="btn btn-outline">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+
+                <button class="btn btn-danger" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= DASHBOARD ================= -->
+    <section class="dashboard">
+        <div class="container">
+
+            <!-- Header -->
+            <h2 class="section-title">Writer Workspace</h2>
+            <p class="section-subtitle">
+                Create, edit, and manage your stories with a beautiful writing experience.
+            </p>
+
+            <!-- Statistics -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-pen-nib"></i>
+                    <h3 id="totalPosts">0</h3>
+                    <p>Total Posts</p>
+                </div>
+
+                <div class="stat-card">
+                    <i class="fas fa-comments"></i>
+                    <h3 id="totalDiscussions">0</h3>
+                    <p>Total Discussions</p>
+                </div>
+
+                <div class="stat-card">
+                    <i class="fas fa-heart"></i>
+                    <h3 id="totalLikes">0</h3>
+                    <p>Total Likes</p>
+                </div>
+            </div>
+
+            <!-- Workspace Grid -->
+            <div class="dashboard-grid">
+
+                <!-- ================= POST FORM ================= -->
+                <div class="post-form-card">
+                    <h3 id="formTitle">
+                        <i class="fas fa-feather-alt"></i>
+                        Create New Story
+                    </h3>
+
+                    <form id="postForm" class="auth-form">
+
+                        <!-- Story Title -->
+                        <div class="input-group">
+                            <label for="postTitle">Story Title</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-heading"></i>
+                                <input
+                                    type="text"
+                                    id="postTitle"
+                                    placeholder="Enter an engaging title"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Category -->
+                        <div class="input-group">
+                            <label for="postCategory">Category</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-folder-open"></i>
+                                <select id="postCategory" required>
+                                    <option value="">Select Category</option>
+                                    <option value="Technology">Technology</option>
+                                    <option value="Programming">Programming</option>
+                                    <option value="Education">Education</option>
+                                    <option value="Travel">Travel</option>
+                                    <option value="Lifestyle">Lifestyle</option>
+                                    <option value="Health">Health</option>
+                                    <option value="Personal">Personal</option>
+                                    <option value="Motivation">Motivation</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Featured Image -->
+                        <div class="input-group">
+                            <label for="postImage">Featured Image</label>
+
+                            <div class="custom-file-upload">
+                                <input
+                                    type="file"
+                                    id="postImage"
+                                    accept="image/*"
+                                    onchange="previewImage(event)"
+                                />
+
+                                <label for="postImage" class="file-upload-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Choose Featured Image</span>
+                                </label>
+
+                                <div id="imagePreviewContainer" class="image-preview-container">
+                                    <img id="imagePreview" alt="Preview" />
+                                    <p id="imageFileName">No image selected</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Story Content -->
+                        <div class="input-group">
+                            <label for="postContent">Story Content</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-align-left"></i>
+                                <textarea
+                                    id="postContent"
+                                    placeholder="Write your story here..."
+                                    required
+                                ></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="form-actions">
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                                id="submitBtn"
+                            >
+                                <i class="fas fa-paper-plane"></i>
+                                Publish Story
+                            </button>
+
+                            <button
+                                type="button"
+                                class="btn btn-outline"
+                                id="cancelEditBtn"
+                                style="display: none;"
+                                onclick="cancelEdit()"
+                            >
+                                <i class="fas fa-times"></i>
+                                Cancel
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- ================= USER POSTS ================= -->
+                <div>
+                    <h3
+                        style="
+                            font-size: 1.6rem;
+                            margin-bottom: 24px;
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                        "
+                    >
+                        <i
+                            class="fas fa-book-open"
+                            style="color: var(--primary);"
+                        ></i>
+                        Your Stories
+                    </h3>
+
+                    <!-- User posts rendered here -->
+                    <div id="dashboardPosts" class="posts-grid"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to Top -->
+    <button id="scrollTopBtn" class="scroll-top" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/theme.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>

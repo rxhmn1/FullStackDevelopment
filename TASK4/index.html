@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StoryHub | Share Your Stories with the World</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- Background Blur Effects -->
+    <div class="bg-blur blur-1"></div>
+    <div class="bg-blur blur-2"></div>
+
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-toggle" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="StoryHub Logo" />
+                <h1>StoryHub</h1>
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="nav-links">
+                <a href="index.html" class="btn btn-outline">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+
+                <a href="login.html" class="btn btn-outline">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Login
+                </a>
+
+                <a href="register.html" class="btn btn-primary">
+                    <i class="fas fa-user-plus"></i>
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>
+                    Share Your <span>Stories</span><br />
+                    with the World
+                </h2>
+
+                <p>
+                    StoryHub is a modern blogging platform where writers can
+                    create inspiring posts, engage with readers, and build a
+                    vibrant community through meaningful comments.
+                </p>
+
+                <a href="register.html" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    Start Writing Today
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SEARCH SECTION ================= -->
+    <section class="container">
+        <div class="search-section">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search stories by title, content, or category..."
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= POSTS SECTION ================= -->
+    <main class="container">
+        <h2 class="section-title">Latest Stories</h2>
+        <p class="section-subtitle">
+            Explore inspiring articles, personal experiences, and creative
+            thoughts shared by the StoryHub community.
+        </p>
+
+        <!-- Blog posts will be rendered here -->
+        <div id="postsContainer" class="posts-grid"></div>
+    </main>
+
+    <!-- ================= SCROLL TO TOP ================= -->
+    <button id="scrollTopBtn" class="scroll-top" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ================= FOOTER ================= -->
+    <footer style="text-align:center; padding:60px 20px 30px; color: var(--text-secondary);">
+        <p>© 2026 StoryHub. Crafted with ❤️ by Rahman Reddy.</p>
+    </footer>
+
+    <script src="js/theme.js"></script>
+<script src="js/app.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/blog.js"></script>
+</body>
+</html>
